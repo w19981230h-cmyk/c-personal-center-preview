@@ -741,6 +741,9 @@ a {
 }
 
 .health-screen {
+  --health-panel-top: 110px;
+  --health-panel-height: 96px;
+  --health-body-gap: 10px;
   background:
     radial-gradient(circle at 78% -4%, rgba(97, 139, 238, 0.26) 0 62px, transparent 63px),
     radial-gradient(circle at 8% 1%, rgba(255, 255, 255, 0.78) 0 70px, transparent 71px),
@@ -799,10 +802,15 @@ a {
 }
 
 .body-profile-card {
-  margin-top: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(var(--health-panel-top) + var(--health-panel-height) + var(--health-body-gap));
+  bottom: 0;
+  margin-top: 0;
   padding: 0;
-  height: calc(100vh - 238px);
-  min-height: 640px;
+  height: auto;
+  min-height: 0;
   overflow: hidden;
   border: 0;
   border-radius: 0;
@@ -816,7 +824,7 @@ a {
   align-items: flex-start;
   height: 100%;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 0;
   padding-left: 0;
 }
 
@@ -824,7 +832,7 @@ a {
   display: block;
   width: auto;
   max-width: none;
-  height: calc(100% - 15px);
+  height: 100%;
   min-height: 0;
   object-fit: contain;
   object-position: center top;
@@ -1106,10 +1114,11 @@ a {
 .health-side-panel {
   position: absolute;
   z-index: 3;
-  top: 110px;
+  top: var(--health-panel-top);
   left: 16px;
   right: 16px;
   width: auto;
+  height: var(--health-panel-height);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 8px;
