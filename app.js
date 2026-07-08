@@ -22,7 +22,7 @@ const patients = {
     bodyAlt: "女性人体健康画像",
   },
   male: {
-    name: "张患者",
+    name: "李先生",
     genderLabel: "男",
     age: "42岁",
     avatar: "./assets/avatar-male.png",
@@ -38,7 +38,7 @@ const getInitialGender = () => {
 
 const getInitialScreen = () => {
   const screen = new URLSearchParams(window.location.search).get("screen");
-  return screen === "health" || screen === "profile" ? screen : "home";
+  return screen === "health" || screen === "home" ? screen : "profile";
 };
 
 let currentGender = getInitialGender();
