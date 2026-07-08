@@ -1041,10 +1041,10 @@ a {
 }
 
 .organ-heart .organ-line {
-  left: -64px;
-  top: 25px;
-  width: 70px;
-  transform: rotate(-5deg);
+  left: -47px;
+  top: 41px;
+  width: 53px;
+  transform: rotate(0deg);
 }
 
 .organ-liver {
@@ -1053,10 +1053,10 @@ a {
 }
 
 .organ-liver .organ-line {
-  left: -118px;
-  top: 31px;
-  width: 124px;
-  transform: rotate(-7deg);
+  left: -76px;
+  top: 34px;
+  width: 82px;
+  transform: rotate(0deg);
 }
 
 .organ-stomach {
@@ -1065,10 +1065,10 @@ a {
 }
 
 .organ-stomach .organ-line {
-  left: -60px;
-  top: 25px;
-  width: 66px;
-  transform: rotate(-3deg);
+  left: -26px;
+  top: 13px;
+  width: 32px;
+  transform: rotate(0deg);
 }
 
 .organ-lung {
@@ -1077,10 +1077,10 @@ a {
 }
 
 .organ-lung .organ-line {
-  right: -78px;
-  top: 38px;
-  width: 84px;
-  transform: rotate(4deg);
+  right: -24px;
+  top: 57px;
+  width: 30px;
+  transform: rotate(0deg);
 }
 
 .analysis-card {
