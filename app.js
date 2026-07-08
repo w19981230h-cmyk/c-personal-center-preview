@@ -18,7 +18,7 @@ const patients = {
     genderLabel: "女",
     age: "35岁",
     avatar: "./assets/avatar-female.png",
-    body: "./assets/body-female.png",
+    body: "./assets/body-female.png?v=body-visible-1",
     bodyAlt: "女性人体健康画像",
   },
   male: {
@@ -26,7 +26,7 @@ const patients = {
     genderLabel: "男",
     age: "42岁",
     avatar: "./assets/avatar-male.png",
-    body: "./assets/body-male.png",
+    body: "./assets/body-male.png?v=body-visible-1",
     bodyAlt: "男性人体健康画像",
   },
 };
