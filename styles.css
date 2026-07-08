@@ -742,7 +742,7 @@ a {
 
 .health-screen {
   --health-panel-top: 110px;
-  --health-panel-height: 96px;
+  --health-panel-height: 82px;
   --health-body-gap: 10px;
   background:
     radial-gradient(circle at 78% -4%, rgba(97, 139, 238, 0.26) 0 62px, transparent 63px),
@@ -752,11 +752,11 @@ a {
 
 .profile-summary-card {
   display: grid;
-  grid-template-columns: 38px 1fr;
-  gap: 8px;
+  grid-template-columns: 34px 1fr;
+  gap: 7px;
   align-items: center;
   margin: 0;
-  padding: 10px 9px;
+  padding: 8px 9px;
   border: 0;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.86);
@@ -764,8 +764,8 @@ a {
 }
 
 .summary-avatar {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
   object-fit: cover;
   object-position: center 14%;
   background: #eaf2ff;
@@ -777,22 +777,22 @@ a {
 .summary-copy h2 {
   margin: 0;
   color: #0f2148;
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 15px;
+  line-height: 1.15;
 }
 
 .summary-tags {
   display: flex;
-  gap: 6px;
-  margin-top: 6px;
+  gap: 5px;
+  margin-top: 5px;
 }
 
 .summary-tags span {
   min-width: auto;
   padding: 0;
   color: #2d72ff;
-  font-size: 12px;
-  font-weight: 900;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .summary-tags span + span::before {
@@ -1085,7 +1085,7 @@ a {
 
 .analysis-card {
   margin: 0;
-  padding: 10px 10px 11px;
+  padding: 8px 9px;
   border: 0;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.86);
@@ -1095,8 +1095,9 @@ a {
 .analysis-card h2 {
   position: relative;
   margin: 0;
-  padding-left: 24px;
-  font-size: 14px;
+  padding-left: 21px;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .analysis-card h2::before {
@@ -1106,19 +1107,19 @@ a {
   top: -2px;
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   color: #2d72ff;
   background: #e9f1ff;
   border-radius: 6px;
-  font-size: 10px;
+  font-size: 9px;
 }
 
 .metric-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 6px;
-  margin-top: 11px;
+  gap: 5px;
+  margin-top: 8px;
 }
 
 .metric-grid div {
@@ -1135,15 +1136,15 @@ a {
 .metric-grid span {
   display: block;
   color: #667694;
-  font-size: 12px;
-  font-weight: 900;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .metric-grid strong {
   display: block;
   margin-top: 0;
   color: #ff454f;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1;
 }
 
