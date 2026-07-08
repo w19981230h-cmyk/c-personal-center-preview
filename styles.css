@@ -856,7 +856,7 @@ a {
 
 .organ-card {
   position: absolute;
-  width: 132px;
+  width: 150px;
   pointer-events: auto;
 }
 
@@ -865,10 +865,10 @@ a {
   z-index: 2;
   display: grid;
   grid-template-columns: 26px 1fr 18px;
-  gap: 7px;
+  gap: 6px;
   align-items: center;
-  min-height: 50px;
-  padding: 8px;
+  min-height: 58px;
+  padding: 8px 7px;
   background: rgba(255, 255, 255, 0.91);
   border: 1px solid rgba(213, 226, 247, 0.9);
   border-radius: 12px;
@@ -876,7 +876,8 @@ a {
 }
 
 .organ-card h3,
-.organ-card p {
+.organ-card p,
+.organ-card em {
   margin: 0;
 }
 
@@ -892,6 +893,17 @@ a {
   font-size: 11px;
   font-weight: 900;
   line-height: 1.2;
+}
+
+.organ-card em {
+  display: block;
+  margin-top: 3px;
+  color: #2d72ff;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .severity-tag {
@@ -944,17 +956,27 @@ a {
 .organ-detail {
   display: none;
   margin: 5px 0 0;
-  padding: 7px 8px;
+  padding: 8px;
   color: #53627c;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(220, 231, 247, 0.95);
   border-radius: 10px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 800;
-  line-height: 1.45;
+  line-height: 1.42;
 }
 
 .organ-card.is-open .organ-detail {
+  display: grid;
+  gap: 3px;
+}
+
+.organ-detail strong {
+  color: #102047;
+  font-size: 10px;
+}
+
+.organ-detail span {
   display: block;
 }
 
@@ -1009,7 +1031,7 @@ a {
 
 .organ-heart {
   top: 126px;
-  right: 14px;
+  right: 8px;
 }
 
 .organ-heart .organ-line {
@@ -1021,7 +1043,7 @@ a {
 
 .organ-liver {
   top: 224px;
-  right: 18px;
+  right: 10px;
 }
 
 .organ-liver .organ-line {
@@ -1033,7 +1055,7 @@ a {
 
 .organ-stomach {
   top: 287px;
-  right: 12px;
+  right: 8px;
 }
 
 .organ-stomach .organ-line {

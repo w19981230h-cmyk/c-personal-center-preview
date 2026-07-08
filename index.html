@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>春晓健康 - C端个人中心</title>
-    <link rel="stylesheet" href="./styles.css?v=male-flow-3" />
+    <link rel="stylesheet" href="./styles.css?v=health-detail-1" />
   </head>
   <body>
     <main class="preview-shell" aria-label="春晓健康C端界面预览">
@@ -303,10 +303,16 @@
                 <div>
                   <h3>心脏</h3>
                   <p>心血管疾病</p>
+                  <em>血压 148/92</em>
                 </div>
                 <button type="button" aria-label="查看心脏详情" data-detail-toggle>›</button>
               </div>
-              <p class="organ-detail">血压与心血管风险指标偏高，建议结合近期报告继续跟踪。</p>
+              <div class="organ-detail">
+                <strong>异常依据</strong>
+                <span>收缩压、舒张压连续偏高，心血管风险需重点关注。</span>
+                <strong>管理建议</strong>
+                <span>建议复测血压，减少高盐饮食，并关注心电图/血脂报告。</span>
+              </div>
             </article>
 
             <article class="organ-card organ-liver severity-mid">
@@ -316,10 +322,16 @@
                 <div>
                   <h3>肝脏</h3>
                   <p>肝功能异常</p>
+                  <em>ALT 68U/L</em>
                 </div>
                 <button type="button" aria-label="查看肝脏详情" data-detail-toggle>›</button>
               </div>
-              <p class="organ-detail">肝功能相关指标有波动，建议关注饮食、作息和复查结果。</p>
+              <div class="organ-detail">
+                <strong>异常依据</strong>
+                <span>谷丙转氨酶高于参考范围，提示肝功能存在波动。</span>
+                <strong>管理建议</strong>
+                <span>建议控制饮酒和熬夜，2-4周后结合肝功复查。</span>
+              </div>
             </article>
 
             <article class="organ-card organ-stomach severity-mid">
@@ -329,10 +341,16 @@
                 <div>
                   <h3>胃</h3>
                   <p>胃部风险</p>
+                  <em>PGI 偏低</em>
                 </div>
                 <button type="button" aria-label="查看胃部详情" data-detail-toggle>›</button>
               </div>
-              <p class="organ-detail">胃部指标需要持续观察，建议结合症状和检查报告评估。</p>
+              <div class="organ-detail">
+                <strong>异常依据</strong>
+                <span>胃蛋白酶原相关指标偏低，需结合胃部症状持续观察。</span>
+                <strong>管理建议</strong>
+                <span>建议规律饮食，必要时补充胃镜或幽门螺杆菌检查。</span>
+              </div>
             </article>
 
             <article class="organ-card organ-lung severity-normal">
@@ -342,16 +360,22 @@
                 <div>
                   <h3>肺部</h3>
                   <p>未见异常</p>
+                  <em>胸片正常</em>
                 </div>
                 <button type="button" aria-label="查看肺部详情" data-detail-toggle>›</button>
               </div>
-              <p class="organ-detail">当前肺部相关指标未见明显异常，保持常规健康管理。</p>
+              <div class="organ-detail">
+                <strong>检查结论</strong>
+                <span>当前肺部影像和相关指标未见明显异常。</span>
+                <strong>管理建议</strong>
+                <span>保持常规体检，若出现咳嗽胸闷再进行专项评估。</span>
+              </div>
             </article>
           </div>
         </section>
       </section>
     </main>
 
-    <script src="./app.js?v=male-flow-3"></script>
+    <script src="./app.js?v=health-detail-1"></script>
   </body>
 </html>
