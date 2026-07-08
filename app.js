@@ -31,7 +31,17 @@ const patients = {
   },
 };
 
-let currentGender = "female";
+const getInitialGender = () => {
+  const gender = new URLSearchParams(window.location.search).get("gender");
+  return patients[gender] ? gender : "female";
+};
+
+const getInitialScreen = () => {
+  const screen = new URLSearchParams(window.location.search).get("screen");
+  return screen === "health" || screen === "profile" ? screen : "home";
+};
+
+let currentGender = getInitialGender();
 
 const setScreen = (screen) => {
   shell.classList.toggle("show-profile", screen === "profile");
@@ -50,6 +60,8 @@ const updatePatientView = (gender) => {
   if (patientPortrait) {
     patientPortrait.style.opacity = "0";
     patientPortrait.style.transform = "translateY(4px)";
+    patientPortrait.src = patient.avatar;
+    patientPortrait.alt = `${patient.name}头像`;
 
     window.setTimeout(() => {
       patientPortrait.src = patient.avatar;
@@ -111,3 +123,4 @@ detailButtons.forEach((button) => {
 });
 
 updatePatientView(currentGender);
+setScreen(getInitialScreen());
