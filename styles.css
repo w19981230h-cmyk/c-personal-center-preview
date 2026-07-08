@@ -1030,7 +1030,7 @@ a {
 }
 
 .organ-heart {
-  top: 184px;
+  top: 214px;
   right: 8px;
 }
 
@@ -1042,19 +1042,19 @@ a {
 }
 
 .organ-liver {
-  top: 284px;
+  top: 277px;
   right: 10px;
 }
 
 .organ-liver .organ-line {
-  left: -72px;
+  left: -90px;
   top: 26px;
-  width: 78px;
-  transform: rotate(-3deg);
+  width: 96px;
+  transform: rotate(-2deg);
 }
 
 .organ-stomach {
-  top: 316px;
+  top: 303px;
   right: 8px;
 }
 
@@ -1066,7 +1066,7 @@ a {
 }
 
 .organ-lung {
-  top: 180px;
+  top: 197px;
   left: 8px;
 }
 
