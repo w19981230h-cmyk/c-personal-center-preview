@@ -846,6 +846,14 @@ a {
   pointer-events: none;
 }
 
+.health-screen[data-gender="female"] .organ-callouts {
+  display: none;
+}
+
+.health-screen[data-gender="male"] .body-figure {
+  height: 100%;
+}
+
 .organ-card {
   position: absolute;
   width: 132px;
@@ -1000,51 +1008,51 @@ a {
 }
 
 .organ-heart {
-  top: 150px;
-  right: 12px;
+  top: 126px;
+  right: 14px;
 }
 
 .organ-heart .organ-line {
-  left: -78px;
+  left: -88px;
   top: 29px;
-  width: 84px;
-  transform: rotate(-8deg);
+  width: 94px;
+  transform: rotate(-5deg);
 }
 
 .organ-liver {
-  top: 235px;
+  top: 224px;
   right: 18px;
 }
 
 .organ-liver .organ-line {
-  left: -64px;
+  left: -70px;
   top: 26px;
-  width: 70px;
-  transform: rotate(7deg);
+  width: 76px;
+  transform: rotate(4deg);
 }
 
 .organ-stomach {
-  top: 308px;
+  top: 287px;
   right: 12px;
 }
 
 .organ-stomach .organ-line {
-  left: -78px;
+  left: -82px;
   top: 26px;
-  width: 84px;
-  transform: rotate(-4deg);
+  width: 88px;
+  transform: rotate(-2deg);
 }
 
 .organ-lung {
-  top: 184px;
+  top: 156px;
   left: 10px;
 }
 
 .organ-lung .organ-line {
-  right: -74px;
+  right: -84px;
   top: 27px;
-  width: 80px;
-  transform: rotate(8deg);
+  width: 90px;
+  transform: rotate(5deg);
 }
 
 .analysis-card {

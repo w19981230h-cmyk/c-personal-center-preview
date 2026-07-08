@@ -1,4 +1,5 @@
 const shell = document.querySelector(".preview-shell");
+const healthScreen = document.querySelector("[data-screen='health']");
 const navButtons = document.querySelectorAll("[data-target]");
 const patientButtons = document.querySelectorAll("[data-patient-gender]");
 const patientPortrait = document.querySelector("[data-patient-portrait]");
@@ -71,6 +72,8 @@ const updatePatientView = (gender) => {
     bodyFigure.src = patient.body;
     bodyFigure.alt = patient.bodyAlt;
   }
+
+  if (healthScreen) healthScreen.dataset.gender = gender;
 };
 
 navButtons.forEach((button) => {
