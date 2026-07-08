@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>春晓健康 - C端个人中心</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="preview-shell" aria-label="春晓健康C端界面预览">
+      <section class="phone-screen" data-screen="home" aria-label="首页">
+        <div class="ambient ambient-a"></div>
+        <div class="status-bar">
+          <span>9:41</span>
+          <span class="system-icons">▮▮ ○ ■</span>
+        </div>
+
+        <header class="home-header">
+          <div class="brand">
+            <span class="brand-mark">◆</span>
+            <strong>春晓健康</strong>
+          </div>
+          <button class="capsule-menu" aria-label="更多">
+            <span>•••</span>
+            <span class="close-dot">×</span>
+          </button>
+        </header>
+
+        <nav class="member-strip" aria-label="成员切换">
+          <button class="member-card">
+            <span class="avatar peach"></span>
+            <span>
+              <strong>张女士</strong>
+              <small>35岁　本人</small>
+            </span>
+          </button>
+          <button class="member-card active">
+            <span class="avatar blue">张</span>
+            <span><strong>张女士</strong></span>
+          </button>
+          <button class="member-card">
+            <span class="avatar coral">李</span>
+            <span><strong>李先生</strong></span>
+          </button>
+          <button class="member-card compact">
+            <span class="avatar mint">+</span>
+          </button>
+        </nav>
+
+        <section class="score-card">
+          <p class="green-label">健康评分</p>
+          <div class="score-row">
+            <strong>86</strong>
+            <span>分</span>
+            <em>良好</em>
+          </div>
+          <div class="divider"></div>
+          <h2>AI建议</h2>
+          <p class="advice">
+            建议保持下降趋势，继续坚持当前计划；可增加力量训练，帮助提升基础代谢。
+          </p>
+          <button class="soft-button">查看档案信息</button>
+        </section>
+
+        <section class="quick-actions" aria-label="快捷入口">
+          <button>
+            <span class="action-icon blue-grad">▰</span>
+            健康咨询
+          </button>
+          <button>
+            <span class="action-icon green-grad">▭</span>
+            报告解读
+          </button>
+          <button>
+            <span class="action-icon red-grad">●</span>
+            春晓商城
+          </button>
+          <button>
+            <span class="action-icon purple-grad">▦</span>
+            全部功能
+          </button>
+        </section>
+
+        <section class="service-card">
+          <div class="section-title">
+            <h2>健康服务</h2>
+            <a href="#">查看全部 ›</a>
+          </div>
+          <article class="service-item">
+            <div class="service-cover"></div>
+            <div>
+              <h3>90天控糖管理服务包</h3>
+              <p>月销量 7,560+</p>
+            </div>
+            <button>查看详情</button>
+          </article>
+          <article class="service-item">
+            <div class="service-cover"></div>
+            <div>
+              <h3>90天减重管理服务包</h3>
+              <p>月销量 9,860+</p>
+            </div>
+            <button>查看详情</button>
+          </article>
+          <article class="service-item">
+            <div class="service-cover"></div>
+            <div>
+              <h3>90天综合健康服务包</h3>
+              <p>月销量 6,230+</p>
+            </div>
+            <button>查看详情</button>
+          </article>
+        </section>
+
+        <button class="floating-add" aria-label="新增">+</button>
+        <footer class="bottom-tabs">
+          <button class="active" data-target="home"><span>⌂</span>推荐</button>
+          <button><span>▣</span>健康日程</button>
+          <button><span>▤</span>服务</button>
+          <button data-target="profile"><span>♙</span>我的</button>
+        </footer>
+      </section>
+
+      <section class="phone-screen" data-screen="profile" aria-label="我的界面">
+        <div class="ambient ambient-b"></div>
+        <div class="status-bar">
+          <span>9:41</span>
+          <span class="system-icons">▮▮ ○ ■</span>
+        </div>
+
+        <header class="profile-header">
+          <button class="back-button" aria-label="返回">‹</button>
+          <h1>健康档案</h1>
+          <button class="capsule-menu" aria-label="更多">
+            <span>•••</span>
+            <span class="close-dot">×</span>
+          </button>
+        </header>
+
+        <nav class="member-strip profile-members" aria-label="档案成员切换">
+          <button class="member-card active" data-patient-gender="female">
+            <span class="avatar blue">张</span>
+            <span><strong>张女士</strong></span>
+          </button>
+          <button class="member-card" data-patient-gender="male">
+            <span class="avatar coral">张</span>
+            <span><strong>张患者</strong></span>
+          </button>
+          <button class="ring-button" aria-label="切换"></button>
+        </nav>
+
+        <section class="hero-card">
+          <div class="rating-panel">
+            <div class="gauge">
+              <span></span>
+              <strong>良好</strong>
+            </div>
+            <p>健康评级</p>
+            <button>查看详情</button>
+          </div>
+          <div class="avatar-stage">
+            <button class="portrait-entry" type="button" data-open-health-profile aria-label="查看健康画像">
+              <img class="patient-portrait" src="./assets/avatar-female.png" alt="张女士头像" data-patient-portrait />
+            </button>
+          </div>
+        </section>
+
+        <section class="assistant-card">
+          <span class="robot-icon">☻</span>
+          <div>
+            <h2>医护助理</h2>
+            <p>最近血压偏高哦 最近血压偏高哦 最近血压你好</p>
+          </div>
+          <button aria-label="编辑">⌁</button>
+        </section>
+
+        <section class="feature-tabs">
+          <button class="active"><span>▤</span>健康档案</button>
+          <button><span>▥</span>健康数据</button>
+          <button><span>▧</span>健康评估</button>
+          <button class="badge"><em>3</em><span>▣</span>我的订单</button>
+          <button><span>▤</span>我的设备</button>
+        </section>
+
+        <section class="history-card">
+          <div class="section-title">
+            <h2>病历夹</h2>
+            <button>健康史 ＞</button>
+          </div>
+          <div class="chip-row" aria-label="病历类型">
+            <button class="active">全部</button>
+            <button>门诊病历</button>
+            <button>检查报告</button>
+            <button>检验报告</button>
+            <button>出院记录</button>
+          </div>
+          <div class="scroll-indicator"></div>
+
+          <div class="month-block">
+            <h3>2026年07月</h3>
+            <article class="report-item">
+              <div>
+                <div class="report-meta">
+                  <strong>报告单</strong>
+                  <span>检查时间：2026.07.07</span>
+                </div>
+                <h4>腹部超声检查报告单</h4>
+                <p>来源：自动上传</p>
+              </div>
+              <span class="paper-icon"></span>
+            </article>
+          </div>
+          <div class="month-block">
+            <h3>2025年06月</h3>
+            <article class="report-item">
+              <div>
+                <div class="report-meta">
+                  <strong>报告单</strong>
+                  <span>检查时间：2025.06.01</span>
+                </div>
+                <h4>血常规 检验报告</h4>
+                <p>来源：自动上传</p>
+              </div>
+              <span class="paper-icon"></span>
+            </article>
+          </div>
+          <div class="month-block">
+            <h3>2025年05月</h3>
+            <article class="report-item">
+              <div>
+                <div class="report-meta">
+                  <strong>报告单</strong>
+                  <span>检查时间：2025.05.28</span>
+                </div>
+                <h4>肝功能 检验报告</h4>
+                <p>来源：自动上传</p>
+              </div>
+              <span class="paper-icon"></span>
+            </article>
+          </div>
+        </section>
+
+        <footer class="bottom-tabs">
+          <button data-target="home"><span>⌂</span>推荐</button>
+          <button><span>▣</span>健康日程</button>
+          <button><span>▤</span>服务</button>
+          <button class="active" data-target="profile"><span>♙</span>我的</button>
+        </footer>
+      </section>
+
+      <section class="phone-screen health-screen" data-screen="health" aria-label="健康画像界面">
+        <div class="ambient ambient-b"></div>
+        <div class="status-bar">
+          <span>9:41</span>
+          <span class="system-icons">▮▮ ○ ■</span>
+        </div>
+
+        <header class="profile-header">
+          <button class="back-button" type="button" aria-label="返回健康档案" data-back-profile>‹</button>
+          <h1>健康画像</h1>
+          <button class="capsule-menu" aria-label="更多">
+            <span>•••</span>
+            <span class="close-dot">×</span>
+          </button>
+        </header>
+
+        <div class="health-side-panel">
+          <section class="profile-summary-card">
+            <img class="summary-avatar" src="./assets/avatar-female.png" alt="张女士头像" data-summary-avatar />
+            <div class="summary-copy">
+              <h2 data-summary-name>张女士</h2>
+              <div class="summary-tags">
+                <span data-summary-gender>女</span>
+                <span data-summary-age>35岁</span>
+              </div>
+            </div>
+          </section>
+
+          <section class="analysis-card">
+            <h2>综合分析</h2>
+            <div class="metric-grid">
+              <div>
+                <span>待关注指标:</span>
+                <strong>7项</strong>
+              </div>
+              <div>
+                <span>重点异常指标:</span>
+                <strong>3项</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="body-profile-card">
+          <div class="body-figure-wrap">
+            <img class="body-figure" src="./assets/body-female.png" alt="女性人体健康画像" data-body-figure />
+          </div>
+          <div class="organ-callouts" aria-label="器官指标标注">
+            <article class="organ-card organ-heart severity-high">
+              <span class="organ-line"></span>
+              <div class="organ-card-main">
+                <span class="severity-tag">高</span>
+                <div>
+                  <h3>心脏</h3>
+                  <p>心血管疾病</p>
+                </div>
+                <button type="button" aria-label="查看心脏详情" data-detail-toggle>›</button>
+              </div>
+              <p class="organ-detail">血压与心血管风险指标偏高，建议结合近期报告继续跟踪。</p>
+            </article>
+
+            <article class="organ-card organ-liver severity-mid">
+              <span class="organ-line"></span>
+              <div class="organ-card-main">
+                <span class="severity-tag">中</span>
+                <div>
+                  <h3>肝脏</h3>
+                  <p>肝功能异常</p>
+                </div>
+                <button type="button" aria-label="查看肝脏详情" data-detail-toggle>›</button>
+              </div>
+              <p class="organ-detail">肝功能相关指标有波动，建议关注饮食、作息和复查结果。</p>
+            </article>
+
+            <article class="organ-card organ-stomach severity-mid">
+              <span class="organ-line"></span>
+              <div class="organ-card-main">
+                <span class="severity-tag">中</span>
+                <div>
+                  <h3>胃</h3>
+                  <p>胃部风险</p>
+                </div>
+                <button type="button" aria-label="查看胃部详情" data-detail-toggle>›</button>
+              </div>
+              <p class="organ-detail">胃部指标需要持续观察，建议结合症状和检查报告评估。</p>
+            </article>
+
+            <article class="organ-card organ-lung severity-normal">
+              <span class="organ-line"></span>
+              <div class="organ-card-main">
+                <span class="severity-tag">正常</span>
+                <div>
+                  <h3>肺部</h3>
+                  <p>未见异常</p>
+                </div>
+                <button type="button" aria-label="查看肺部详情" data-detail-toggle>›</button>
+              </div>
+              <p class="organ-detail">当前肺部相关指标未见明显异常，保持常规健康管理。</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
