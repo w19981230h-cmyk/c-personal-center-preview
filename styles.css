@@ -742,8 +742,8 @@ a {
 
 .health-screen {
   --health-panel-top: 110px;
-  --health-panel-height: 82px;
-  --health-body-gap: 10px;
+  --health-panel-height: 62px;
+  --health-body-gap: 8px;
   background:
     radial-gradient(circle at 78% -4%, rgba(97, 139, 238, 0.26) 0 62px, transparent 63px),
     radial-gradient(circle at 8% 1%, rgba(255, 255, 255, 0.78) 0 70px, transparent 71px),
@@ -752,11 +752,11 @@ a {
 
 .profile-summary-card {
   display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 7px;
+  grid-template-columns: 28px 1fr;
+  gap: 6px;
   align-items: center;
   margin: 0;
-  padding: 8px 9px;
+  padding: 6px 8px;
   border: 0;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.86);
@@ -764,34 +764,34 @@ a {
 }
 
 .summary-avatar {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   object-fit: cover;
   object-position: center 14%;
   background: #eaf2ff;
   border: 2px solid #fff;
-  border-radius: 14px;
+  border-radius: 11px;
   box-shadow: 0 6px 14px rgba(47, 93, 181, 0.13);
 }
 
 .summary-copy h2 {
   margin: 0;
   color: #0f2148;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.15;
 }
 
 .summary-tags {
   display: flex;
   gap: 5px;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .summary-tags span {
   min-width: auto;
   padding: 0;
   color: #2d72ff;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -1035,6 +1035,18 @@ a {
   background: #18bf83;
 }
 
+.organ-head {
+  top: 46px;
+  right: 8px;
+}
+
+.organ-head .organ-line {
+  left: -55px;
+  top: 30px;
+  width: 61px;
+  transform: rotate(0deg);
+}
+
 .organ-heart {
   top: 195px;
   right: 8px;
@@ -1085,7 +1097,7 @@ a {
 
 .analysis-card {
   margin: 0;
-  padding: 8px 9px;
+  padding: 6px 8px;
   border: 0;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.86);
@@ -1095,8 +1107,8 @@ a {
 .analysis-card h2 {
   position: relative;
   margin: 0;
-  padding-left: 21px;
-  font-size: 13px;
+  padding-left: 18px;
+  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -1118,8 +1130,13 @@ a {
 .metric-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5px;
-  margin-top: 8px;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.metric-grid[hidden],
+.analysis-empty[hidden] {
+  display: none !important;
 }
 
 .metric-grid div {
@@ -1136,7 +1153,7 @@ a {
 .metric-grid span {
   display: block;
   color: #667694;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
 }
 
@@ -1144,8 +1161,18 @@ a {
   display: block;
   margin-top: 0;
   color: #ff454f;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1;
+}
+
+.analysis-empty {
+  display: grid;
+  place-items: center;
+  min-height: 28px;
+  margin-top: 5px;
+  color: #8a9ab4;
+  font-size: 11px;
+  font-weight: 800;
 }
 
 .health-side-panel {
@@ -1158,8 +1185,8 @@ a {
   height: var(--health-panel-height);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 8px;
-  align-items: stretch;
+  gap: 6px;
+  align-items: start;
   padding: 0;
 }
 
