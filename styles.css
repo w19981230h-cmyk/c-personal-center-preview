@@ -755,6 +755,7 @@ a {
   grid-template-columns: 28px 1fr;
   gap: 6px;
   align-items: center;
+  height: 100%;
   margin: 0;
   padding: 6px 8px;
   border: 0;
@@ -1096,6 +1097,10 @@ a {
 }
 
 .analysis-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
   margin: 0;
   padding: 6px 8px;
   border: 0;
@@ -1139,6 +1144,14 @@ a {
   display: none !important;
 }
 
+.health-screen[data-gender="female"] .metric-grid {
+  display: none;
+}
+
+.health-screen[data-gender="male"] .analysis-empty {
+  display: none;
+}
+
 .metric-grid div {
   display: flex;
   align-items: center;
@@ -1168,11 +1181,11 @@ a {
 .analysis-empty {
   display: grid;
   place-items: center;
-  min-height: 28px;
-  margin-top: 5px;
+  min-height: 24px;
+  margin-top: 4px;
   color: #8a9ab4;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .health-side-panel {
@@ -1186,7 +1199,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 6px;
-  align-items: start;
+  align-items: stretch;
   padding: 0;
 }
 
