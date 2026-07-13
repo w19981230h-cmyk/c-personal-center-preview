@@ -757,10 +757,10 @@ a {
   align-items: center;
   height: 100%;
   margin: 0;
-  padding: 6px 8px;
+  padding: 6px 12px;
   border: 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.86);
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
 }
 
@@ -1102,10 +1102,10 @@ a {
   justify-content: center;
   height: 100%;
   margin: 0;
-  padding: 6px 8px;
+  padding: 6px 12px;
   border: 0;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.86);
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
 }
 
@@ -1198,9 +1198,24 @@ a {
   height: var(--health-panel-height);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 6px;
+  gap: 0;
   align-items: stretch;
   padding: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.health-side-panel::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 50%;
+  width: 1px;
+  background: rgba(183, 202, 232, 0.8);
+  transform: translateX(-0.5px);
 }
 
 .assistant-card {

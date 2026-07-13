@@ -10,6 +10,9 @@ const summaryName = document.querySelector("[data-summary-name]");
 const summaryGender = document.querySelector("[data-summary-gender]");
 const summaryAge = document.querySelector("[data-summary-age]");
 const bodyFigure = document.querySelector("[data-body-figure]");
+const analysisCard = document.querySelector(".analysis-card");
+const metricGrid = document.querySelector(".analysis-card .metric-grid");
+const metricValues = document.querySelectorAll(".metric-grid strong");
 const detailButtons = document.querySelectorAll("[data-detail-toggle]");
 
 const patients = {
@@ -19,6 +22,7 @@ const patients = {
     age: "35岁",
     avatar: "./assets/avatar-female.png",
     body: "./assets/body-female.png?v=body-visible-1",
+    analysis: { watch: 0, abnormal: 0 },
     bodyAlt: "女性人体健康画像",
   },
   male: {
@@ -26,7 +30,8 @@ const patients = {
     genderLabel: "男",
     age: "42岁",
     avatar: "./assets/avatar-male.png",
-    body: "./assets/body-male.png?v=body-visible-1",
+    body: "./assets/body-male.png?v=male-body-photo-1",
+    analysis: { watch: 7, abnormal: 3 },
     bodyAlt: "男性人体健康画像",
   },
 };
@@ -42,11 +47,43 @@ const getInitialScreen = () => {
 };
 
 let currentGender = getInitialGender();
+let analysisEmptyState = null;
 
 const setScreen = (screen) => {
   shell.classList.toggle("show-profile", screen === "profile");
   shell.classList.toggle("show-health", screen === "health");
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+};
+
+const getAnalysisEmptyState = () => {
+  if (analysisEmptyState || !analysisCard) return analysisEmptyState;
+
+  analysisEmptyState = document.createElement("div");
+  analysisEmptyState.className = "analysis-empty";
+  analysisEmptyState.dataset.analysisEmpty = "";
+  analysisEmptyState.textContent = "\u6682\u65e0\u6570\u636e";
+  analysisEmptyState.hidden = true;
+  analysisCard.appendChild(analysisEmptyState);
+
+  return analysisEmptyState;
+};
+
+const updateAnalysisView = (analysis) => {
+  if (!metricGrid) return;
+
+  const values = [analysis?.watch || 0, analysis?.abnormal || 0];
+  const isEmpty = values.every((value) => value === 0);
+  const emptyState = getAnalysisEmptyState();
+
+  metricGrid.hidden = isEmpty;
+  if (emptyState) emptyState.hidden = !isEmpty;
+  if (analysisCard) analysisCard.classList.toggle("is-empty", isEmpty);
+
+  if (!isEmpty) {
+    metricValues.forEach((item, index) => {
+      item.textContent = `${values[index]}\u9879`;
+    });
+  }
 };
 
 const updatePatientView = (gender) => {
@@ -79,6 +116,7 @@ const updatePatientView = (gender) => {
   if (summaryName) summaryName.textContent = patient.name;
   if (summaryGender) summaryGender.textContent = patient.genderLabel;
   if (summaryAge) summaryAge.textContent = patient.age;
+  updateAnalysisView(patient.analysis);
 
   if (bodyFigure) {
     bodyFigure.src = patient.body;
